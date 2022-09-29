@@ -14499,13 +14499,18 @@ L.easyButton('<img style="max-height:15px;" src="images/info-solid.png">', funct
 <script>
 
 // loading vigevano boundaries
+// make geojson uninteractive https://stackoverflow.com/questions/70857657/geoman-in-leaflet-how-to-disable-a-click-on-a-polygon
+// uninteractive and stylish https://gis.stackexchange.com/questions/326181/non-interactive-points-in-leaflet
 
-L.geoJson(vige,     style={
+var vige_style = {
     'color': 'grey',
     'opacity': 1, 
     'dashArray': '10', 
     'fillOpacity': 0, 
-    'weight': 2
-    },).addTo(map_6a205905884b4384bc6a141e2e8083b5);
+    'weight': 2}
+
+L.geoJson(vige, {
+    interactive:false,
+    style: vige_style}).addTo(map_6a205905884b4384bc6a141e2e8083b5);
 
 </script>
