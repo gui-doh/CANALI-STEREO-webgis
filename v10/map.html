@@ -1640,12 +1640,12 @@ marker_2fa88f31717d4bafb9dc349a90cf289e.on('click', function (e) {this.openPopup
                     crs: L.CRS.EPSG3857,
                     maxBounds: [[45.151245, 8.692102], [45.483245, 9.024102000000001]],
                     zoom: 12,
-                    zoomControl: true,
+                    zoomControl: false,
                     preferCanvas: false,
 					layers:[Roggia_Vecchia,Roggia_Mora,Naviglio_Sforzesco,Diramatore,Cavo_Bogino]
                 }
             );
-
+            L.control.zoom({position: 'topright'}).addTo(map_6a205905884b4384bc6a141e2e8083b5);
 
 
 
@@ -1660,7 +1660,7 @@ var tile_layer_2 = L.tileLayer("http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z
 </script><script>
 var baselayers = {"Satellite" : tile_layer_2, "Mappa" :tile_layer_524bb66622e84929813efb84b10943b1}
 </script><script>
-layerControl = L.control.layers(baselayers, overlayGroups, {position: 'topleft'} ,{collapsed: true}).addTo(map_6a205905884b4384bc6a141e2e8083b5);
+layerControl = L.control.layers(baselayers, overlayGroups, {position: 'topright'} ,{collapsed: true}).addTo(map_6a205905884b4384bc6a141e2e8083b5);
 </script>
 <script>
             // qui è tutto nuovo
